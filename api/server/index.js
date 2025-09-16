@@ -13,7 +13,7 @@ import cron from "node-cron";
 const app = express();
 const server = http.createServer(app);
 
-const allowlist = ["http://localhost:3000", 'https://bsn.finance', 'https://www.bsn.finance'];
+const allowlist = ["http://localhost:3000", 'https://bsn.finance', 'https://www.bsn.finance', 'https://trade.bsn.finance'];
 
 const corsOptionsDelegate = (req, callback) => {
   let corsOptions;
