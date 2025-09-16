@@ -1,0 +1,199 @@
+.landingpage__jumbotron {
+  color: $white;
+  height: #{scaleValue(800)};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: #{scaleValue(170)};
+  background-image: linear-gradient(to bottom,
+      rgba($landing-primary, 1),
+      rgba($landing-primary, 0.8)),
+    url(/imgs/skyline.avif);
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  @media only screen and (max-width: $breakpoint-tablet) {
+    height: #{scaleValue(1500)};
+    padding-top: #{scaleValue(300)};
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile-large) {
+    height: #{scaleValue(3300)};
+    padding-top: #{scaleValue(500)};
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile-medium) {
+    height: #{scaleValue(3300)};
+    padding-top: #{scaleValue(450)};
+  }
+
+  @media only screen and (max-width: $breakpoint-mobile-small) {
+    height: #{scaleValue(3300)};
+    padding-top: #{scaleValue(400)};
+  }
+
+  &--area {
+    text-align: center;
+
+    h1 {
+      font-weight: 500;
+      font-size: #{scaleValue(50)};
+      line-height: #{scaleValue(70)};
+      display: flex;
+      flex-direction: column;
+
+      @media only screen and (max-width: $breakpoint-mobile-large) {
+        font-size: #{scaleValue(130)};
+        line-height: #{scaleValue(200)};
+        font-weight: 400;
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile-medium) {
+        font-size: #{scaleValue(110)};
+        line-height: #{scaleValue(180)};
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile-small) {
+        font-size: #{scaleValue(100)};
+        line-height: #{scaleValue(160)};
+      }
+    }
+
+    h2 {
+      font-weight: 400;
+      font-size: #{scaleValue(18)};
+      line-height: #{scaleValue(28)};
+      width: #{scaleValue(700)};
+      margin-top: #{scaleValue(20)};
+
+      @media only screen and (max-width: $breakpoint-mobile-large) {
+        font-size: #{scaleValue(60)};
+        line-height: #{scaleValue(90)};
+        width: #{scaleValue(1500)};
+        margin-top: #{scaleValue(55)};
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile-medium) {
+        font-size: #{scaleValue(50)};
+        line-height: #{scaleValue(80)};
+        width: #{scaleValue(1200)};
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile-small) {
+        font-size: #{scaleValue(45)};
+        line-height: #{scaleValue(70)};
+        width: #{scaleValue(1000)};
+      }
+    }
+
+    button {
+      @include greenbtnlanding;
+      border-radius: 0.5rem;
+
+      @media only screen and (max-width: $breakpoint-mobile-large) {
+        margin-top: #{scaleValue(100)};
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile-medium) {
+        margin-top: #{scaleValue(80)};
+      }
+
+      @media only screen and (max-width: $breakpoint-mobile-small) {
+        margin-top: #{scaleValue(70)};
+      }
+    }
+
+    &.buttons {
+      margin-top: #{scaleValue(60)};
+      display: flex;
+
+      @media only screen and (max-width: $breakpoint-mobile-large) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &--facts {
+    display: flex;
+    align-items: center;
+    margin-top: #{scaleValue(130)};
+    padding: #{scaleValue(10)} #{scaleValue(30)};
+    color: $landing-textcolor;
+    background: $green;
+    border-radius: #{scaleValue(20)};
+    border: 1px solid $green;
+
+    @media only screen and (max-width: $breakpoint-mobile-large) {
+      margin-top: #{scaleValue(400)};
+      flex-direction: column;
+      align-items: start;
+      width: #{scaleValue(1500)};
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile-medium) {
+      margin-top: #{scaleValue(350)};
+      width: #{scaleValue(1200)};
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile-small) {
+      margin-top: #{scaleValue(300)};
+      width: #{scaleValue(1000)};
+    }
+  }
+
+  &--fact {
+    display: flex;
+    align-items: center;
+    font-size: #{scaleValue(13)};
+    margin-right: #{scaleValue(50)};
+    font-weight: 600;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile-large) {
+      font-size: #{scaleValue(60)};
+      font-weight: 400;
+      line-height: #{scaleValue(150)};
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile-medium) {
+      font-size: #{scaleValue(50)};
+      line-height: #{scaleValue(130)};
+    }
+
+    @media only screen and (max-width: $breakpoint-mobile-small) {
+      font-size: #{scaleValue(45)};
+      line-height: #{scaleValue(120)};
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+
+      &.image {
+        margin-right: #{scaleValue(10)};
+
+        @media only screen and (max-width: $breakpoint-mobile-large) {
+          width: #{scaleValue(20)};
+          height: #{scaleValue(20)};
+          margin-right: #{scaleValue(100)};
+        }
+
+        @media only screen and (max-width: $breakpoint-mobile-medium) {
+          width: #{scaleValue(18)};
+          height: #{scaleValue(18)};
+          margin-right: #{scaleValue(80)};
+        }
+
+        @media only screen and (max-width: $breakpoint-mobile-small) {
+          width: #{scaleValue(16)};
+          height: #{scaleValue(16)};
+          margin-right: #{scaleValue(60)};
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('/fonts/FONTSPRINGDEMO-ProximaNovaExCnSemiboldRegular.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    font-family: 'proxima-nova', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: #{scaleValue(17)};
+}
+
+.section-header {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.section-paragraph {
+    font-weight: 300;
+    font-size: 2.5rem;
+    color: rgba($white, .8);
+    line-height: 3.5rem;
+    margin-bottom: #{scaleValue(50)};
+
+    @media only screen and (max-width: 1024px) {
+        margin-bottom: #{scaleValue(100)};
+    }
+
+    @media only screen and (max-width: 430px) {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
+    }
+}
+
+.menu-items {
+
+}

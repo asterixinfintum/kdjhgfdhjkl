@@ -1,0 +1,90 @@
+.section {
+    display: flex;
+    padding: $paddingside;
+    //height: #{scaleValue(500)};
+    @include topbottompadding;
+    //background: blue;
+    position: relative;
+    z-index: 4;
+
+    @media only screen and (max-width: 430px) {
+        padding: $paddingsidem;
+    }
+
+    &__firstsection {
+        margin-top: #{scaleValue(1000)};
+
+        @media only screen and (max-width: 1024px) {
+            margin-top: #{scaleValue(1400)};
+        }
+
+        @media only screen and (max-width: 430px) {
+            margin-top: #{scaleValue(2400)};
+        }
+    }
+
+    &__area {
+
+        &--h4 {
+            color: $primary-orange;
+            text-transform: uppercase;
+            margin-bottom: #{scaleValue(10)};
+
+            @media only screen and (max-width: 1024px) {
+                font-size: 2.5rem;
+                margin-bottom: #{scaleValue(80)};
+            }
+
+            @media only screen and (max-width: 430px) {
+                font-size: 1.5rem;
+                margin-bottom: #{scaleValue(80)};
+            }
+        }
+
+        &--h3 {
+            color: $white;
+            margin-bottom: #{scaleValue(30)};
+            font-size: 2rem;
+
+            @media only screen and (max-width: 1024px) {
+                margin-bottom: #{scaleValue(80)};
+            }
+
+            @media only screen and (max-width: 430px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        &--p {
+            //font-weight: 400;
+        }
+
+        &.text-area {
+            width: #{scaleValue(1000)};
+
+            @media only screen and (max-width: 1024px) {
+                width: #{scaleValue(1200)};
+            }
+
+            @media only screen and (max-width: 430px) {
+                width: 100vw;
+            }
+        }
+
+        &.modern-text {
+            margin-top: 6rem !important;
+        }
+    }
+}
+
+.section-paragraph {
+    font-size: #{scaleValue(18)};
+    line-height: #{scaleValue(25)};
+    margin-bottom: #{scaleValue(30)};
+
+    @media only screen and (max-width: 1024px) {
+        font-size: #{scaleValue(80)};
+        line-height: #{scaleValue(130)};
+        margin-bottom: #{scaleValue(100)};
+    }
+}

@@ -1,0 +1,240 @@
+.scrollslider {
+  position: relative;
+  padding-left: #{scaleValue(20)};
+  //background: red;
+  width: 100vw;
+  overflow: hidden;
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
+
+  &__swiper {
+    display: none;
+
+    @media only screen and (max-width: 1024px) {
+      display: block;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    z-index: 2;
+    height: #{scaleValue(700)};
+    position: absolute;
+    left: #{scaleValue(20)};
+    top: 0;
+    transition: all 0.5s ease;
+
+    @media only screen and (max-width: 1024px) {
+      height: #{scaleValue(1300)};
+      display: none;
+    }
+
+    &.oneswipe {
+      transform: translateX(#{scaleValue(-600)});
+    }
+
+    &.twoswipe {
+      transform: translateX(#{scaleValue(-1200)});
+    }
+
+    &.threeswipe {}
+  }
+
+  &__sliderpart {
+    position: absolute;
+    left: #{scaleValue(20)};
+    top: 0;
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+
+    &.fixed {
+      position: fixed;
+      width: 100vw;
+      top: #{scaleValue(152)};
+      left: #{scaleValue(20)};
+      z-index: 2;
+    }
+  }
+
+  &__slidebody {
+    display: grid;
+    grid-template-columns: repeat(4, #{scaleValue(600)});
+    grid-gap: #{scaleValue(20)};
+
+    @media only screen and (max-width: 430px) {
+      grid-template-columns: repeat(4, #{scaleValue(1500)});
+      grid-gap: #{scaleValue(50)};
+    }
+  }
+
+  &__slidemarker {
+    height: #{scaleValue(700)};
+    position: relative;
+    z-index: 1;
+
+    &.one {
+      //background: yellow;
+    }
+
+    &.two {
+      //background: orange;
+    }
+
+    &.three {
+      //background: blue;
+      height: 2vh;
+    }
+  }
+
+  &__slideitem {
+    border-radius: 1.5rem;
+    padding: #{scaleValue(30)};
+    color: rgba($white, 1);
+    height: #{scaleValue(300)};
+    position: relative;
+
+    padding-bottom: 19rem;
+
+    @media only screen and (max-width: 1024px) {
+      height: #{scaleValue(2225)};
+      width: #{scaleValue(1500)};
+      padding: #{scaleValue(100)};
+    }
+
+    @media only screen and (max-width: 430px) {
+      height: #{scaleValue(2225)};
+      width: #{scaleValue(1500)};
+      padding: #{scaleValue(100)};
+    }
+
+    &--h2 {
+      font-weight: 500;
+      font-size: 2rem;
+      font-family: "Space Grotesk", sans-serif;
+      margin-bottom: #{scaleValue(10)};
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 2.5rem;
+        margin-bottom: #{scaleValue(30)};
+      }
+
+      @media only screen and (max-width: 430px) {
+        font-size: 2rem;
+      }
+    }
+
+    &--p {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 1.5rem;
+
+      @media only screen and (max-width: 1024px) {
+        font-size: 2.5rem;
+      }
+
+      @media only screen and (max-width: 430px) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &:nth-child(1) {
+      font-size: 1.7rem;
+      background: linear-gradient(to right bottom,
+          rgba(0, 76, 255, 0.8),
+          rgba(187, 0, 255, 0.5));
+    }
+
+    &:nth-child(2) {
+      font-size: 1.7rem;
+      background: linear-gradient(to right bottom,
+          rgba(63, 0, 255, 0.8),
+          rgba(255, 77, 0, 0.5));
+    }
+
+    &:nth-child(3) {
+      font-size: 1.7rem;
+      background: linear-gradient(to right bottom,
+          rgba(255, 75, 0, 0.8),
+          rgba(255, 96, 0, 0.5));
+    }
+
+    &:nth-child(4) {
+      font-size: 1.7rem;
+      background: linear-gradient(to right bottom,
+          rgba(98, 255, 0, 0.8),
+          rgba(0, 145, 255, 0.5));
+    }
+  }
+
+  &__readmorebtn {
+    position: absolute;
+    bottom: #{scaleValue(30)};
+    left: #{scaleValue(30)};
+    outline: none;
+    border: none;
+    border-radius: 0.6rem;
+
+    padding: #{scaleValue(15)} #{scaleValue(20)};
+    border-radius: 12px;
+    font-size: #{scaleValue(17)};
+    cursor: pointer;
+    font-weight: 500;
+    font-family: "Space Grotesk", sans-serif;
+
+    border: 2px solid transparent;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+      linear-gradient(95.5deg,
+        rgba(0, 58, 255, 0.3) 12.82%,
+        rgba(139, 255, 0, 0.3) 41.96%,
+        rgba(255, 0, 163, 0.08) 75.06%,
+        rgba(15, 53, 255, 0.11) 107.66%);
+
+    background-clip: content-box, border-box;
+    background-color: rgba(237, 232, 239, 0.1) !important;
+    font-weight: 400 !important;
+
+    box-shadow: rgba(237, 232, 239, .7) 1px 1000px 1px inset;
+
+    transition: all .5s ease;
+
+    @media only screen and (max-width: 1024px) {
+      bottom: #{scaleValue(100)};
+      left: #{scaleValue(100)};
+
+      font-size: #{scaleValue(60)};
+      padding: #{scaleValue(40)} #{scaleValue(100)};
+    }
+
+    @media only screen and (max-width: 430px) {
+      bottom: #{scaleValue(100)};
+      left: #{scaleValue(100)};
+
+      font-size: #{scaleValue(80)};
+      padding: #{scaleValue(40)} #{scaleValue(100)};
+    }
+
+    &:hover {
+      background-color: rgba(237, 232, 239, 0.6) !important;
+    }
+
+    &--text {
+      position: relative;
+      z-index: 1;
+    }
+
+    & span {
+      &:nth-child(1) {}
+
+      &:nth-child(2) {
+        display: inline-block;
+        font-size: #{scaleValue(13)};
+        transform: translateY(#{scaleValue(-3)});
+      }
+    }
+  }
+}

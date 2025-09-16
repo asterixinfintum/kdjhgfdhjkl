@@ -1,0 +1,108 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
+:root {
+    --ideal-viewport-width: 1600;
+}
+
+@function scaleValue($value) {
+    @return calc(#{$value} * (clamp(350px, 100vw, 3840px) / var(--ideal-viewport-width)));
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background: #0d0e0f;
+    min-height: #{scaleValue(700)};
+    color: #fff;
+    position: relative;
+}
+
+html {
+    background: $background;
+    font-family: 'Inter', sans-serif;
+    //font-size: #{scaleValue(15)};
+
+    font-size: 100%;
+
+    @media (max-width: 576px) {
+        font-size: 20%;
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (max-width: 768px) {
+        html {
+            font-size: 20%;
+        }
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (max-width: 992px) {
+        html {
+            font-size: 20%;
+        }
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (max-width: 1200px) {
+        html {
+            /* Adjustments for large desktops */
+        }
+    }
+
+    /* XXL devices (larger desktops, 1400px and up) */
+    @media (max-width: 1400px) {
+        html {
+            /* Adjustments for extra-large screens */
+        }
+    }
+
+    /* Extra small devices (phones, 576px and down) - Default styles (mobile-first) */
+
+    /* Small devices (phones, 576px and up) */
+
+}
+
+/* Create a styles rule for the scrollbar itself */
+::-webkit-scrollbar {
+    width: #{scaleValue(.2)};
+    /* adjust the width of the scrollbar */
+    //height: 100vh;
+    /* make the scrollbar tall enough to cover the entire page */
+    background-color: transparent;
+    /* set the color of the scrollbar */
+    border-radius: 10px;
+    /* round the corners of the scrollbar */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+    /* add a subtle shadow effect to the scrollbar */
+    //height: 100vh;
+
+    @media only screen and (max-width: $breakpoint-mobile-large) {
+        height: 2px;
+    }
+}
+
+/* Style the thumb (the small square that moves along the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    /* set the color of the thumb */
+    border-radius: 10px;
+    /* round the corners of the thumb */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+    /* add a subtle shadow effect to the thumb */
+}
+
+/* Style the track (the part of the scrollbar that the thumb moves along) */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+    /* set the color of the track */
+    border-radius: 10px;
+    /* round the corners of the track */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+    /* add a subtle shadow effect to the track */
+}

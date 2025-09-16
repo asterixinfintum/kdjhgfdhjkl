@@ -1,0 +1,96 @@
+.privatesale {
+
+    &__promo {
+        text-align: left;
+        margin-top: 3rem;
+        background: linear-gradient(to right, rgba(247, 146, 54, 0.1), rgba(205, 83, 34, 0.4));
+
+        border-radius: 1rem;
+        padding: 2rem 2rem;
+        position: relative;
+        top: 5rem;
+        background: $landing-primary;
+        min-height: 22rem;
+        width: 100%;
+        left: 0;
+
+        border: 1px solid $primary-orange;
+
+        & h2 {
+            color: $primary-orange;
+            margin-bottom: 1rem;
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 1.3rem;
+        }
+
+        & p {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 1rem;
+        }
+
+        & button {
+
+            &.join {
+                font-size: 1rem !important;
+                margin-top: 2rem !important;
+                border-radius: 0 1rem 0 1rem !important;
+                padding: 1rem 1rem;
+                font-weight: 500;
+
+                color: $primary-orange !important;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1rem;
+
+        margin-top: 2rem;
+
+        @media only screen and (max-width: 430px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    &__card {
+        position: relative;
+        border-radius: .5rem;
+        box-shadow: 0 4px 8px rgba(205, 83, 34, 0.2);
+        background: #161a1e;
+        padding: 1rem;
+        overflow: hidden;
+        padding-bottom: 3rem;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20%;
+            height: 1px;
+            background: $usdt-green;
+        }
+
+        &--header {
+            & h2 {
+                font-size: 1rem !important;
+                color: $white !important;
+                font-family: "Space Grotesk", sans-serif;
+            }
+        }
+
+        &--textcontent {
+
+            & p {
+                font-size: 1rem !important;
+                color: $white !important;
+                font-family: "Space Grotesk", sans-serif;
+            }
+        }
+    }
+}
