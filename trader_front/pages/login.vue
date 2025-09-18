@@ -2,7 +2,7 @@
   <div>
     <div class="header auth" id="header">
       <div class="header__left">
-        <div class="header__logo" @click="$router.push('/')">
+        <div class="header__logo" @click="link.href = 'http://bsn.finance'">
           <figure></figure>
           <p>BSN Finance</p>
         </div>

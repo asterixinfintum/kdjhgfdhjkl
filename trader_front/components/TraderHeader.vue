@@ -7,7 +7,7 @@
     <div class="trader__header" :class="{ mobilemenuopen }">
       <div class="trader__header--area">
         <div class="trader__header--logo" v-if="client">
-          <figure @click="$router.push('/overview')">
+          <figure style="height: 10px important; width: 10px important" @click="$router.push('/overview')">
             <img src="/XRP_LOGO.0257a8ba.svg" />
           </figure>
 
