@@ -55,7 +55,7 @@ $background: rgb(22, 26, 30);
         }
 
         @media only screen and (max-width: $breakpoint-mobile-small) {
-            
+
             height: 15rem;
             flex-direction: column;
             justify-content: flex-start;
@@ -114,21 +114,19 @@ $background: rgb(22, 26, 30);
                 width: 100%
             }
 
-            @media only screen and (max-width: $breakpoint-mobile-large) {
-                
-            }
+            @media only screen and (max-width: $breakpoint-mobile-large) {}
 
-            @media only screen and (max-width: $breakpoint-mobile-medium) {
+            @media only screen and (max-width: $breakpoint-mobile-medium) {}
 
-            }
-
-            @media only screen and (max-width: $breakpoint-mobile-small) {
-
-            }
+            @media only screen and (max-width: $breakpoint-mobile-small) {}
 
             & figure {
                 height: #{scaleValue(50)} !important;
                 width: #{scaleValue(90)} !important;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
                 @media only screen and (max-width: $breakpoint-tablet) {
                     height: #{scaleValue(200)};
@@ -151,8 +149,8 @@ $background: rgb(22, 26, 30);
                 }
 
                 & img {
-                    height: 100%;
-                    width: 100%;
+                    height: 40%;
+                    width: 40%;
                     object-fit: cover;
                 }
             }
