@@ -160,7 +160,7 @@ function getCurrentDateTime() {
 cron.schedule("*/1 * * * *", async () => {
   const date = getCurrentDateTime();
   //await getprices(date);
-});
+}); 
 
 
 cron.schedule('0 */5 * * *', () => {
