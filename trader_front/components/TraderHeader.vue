@@ -19,7 +19,7 @@
         </div>
 
         <div class="trader__header--logo" v-if="!client" @click="$router.push('/')">
-          <figure>
+          <figure style="height: 10px important; width: 10px important">
             <img src="/XRP_LOGO.0257a8ba.svg" />
           </figure>
         </div>
@@ -372,7 +372,11 @@ export default {
     triggerlogout() {
       const { logout, client } = this;
       socket.emit("clientloggedout", { clientid: client._id });
-      logout().then(() => this.$router.push("/"));
+      logout().then(() => {
+        const link = document.createElement("a");
+        link.href = "http://bsn.finance";
+        link.click();
+      });
     },
     scrollToDiv(mydivid) {
       const target = document.getElementById(`${mydivid}`);

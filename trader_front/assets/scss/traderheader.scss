@@ -127,8 +127,8 @@ $background: rgb(22, 26, 30);
             }
 
             & figure {
-                height: #{scaleValue(50)};
-                width: #{scaleValue(90)};
+                height: #{scaleValue(50)} !important;
+                width: #{scaleValue(90)} !important;
 
                 @media only screen and (max-width: $breakpoint-tablet) {
                     height: #{scaleValue(200)};
